@@ -9,9 +9,7 @@ FOOTER_LINKS = (By.CSS_SELECTOR, "table.navFooterMoreOnAmazon td.navFooterDescIt
 HEADER_LINKS = (By.CSS_SELECTOR, "#nav-xshop a.nav-a[data-csa-c-type='link']")
 
 
-@given('Open Amazon page')
-def open_amazon(context):
-    context.driver.get('https://www.amazon.com/')
+
 
 
 @when('Input text {text}')
@@ -28,6 +26,7 @@ def click_search(context):
 def verify_ham_menu_present(context):
     context.driver.find_element(*HAM_MENU)
     # print(element)
+    assert len(elements) == 1, f'Expected 1 element but got {len(elements)}'
 
 
 @then('Verify that footer has {expected_amount} links')
