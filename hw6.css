@@ -1,0 +1,36 @@
+h1 {
+    color: #64ABA1;
+    font-weight: bolder;
+    font-family: 'Amatic SC', cursive;
+    padding: 10px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: xx-large;
+
+}
+
+h2 {
+    color: #199584;
+    font-family: 'Amatic SC', cursive;
+    text-decoration: underline ;
+
+}
+
+div {
+    padding-left: 20px;
+}
+body {
+    background-color: #FFF1FC;
+    font-family: 'Amatic SC', cursive;
+    margin: 0px;
+    height: 100px;
+    text-align: left;
+    cursor: pointer;
+
+
+}
+
+.cookie:hover {
+    text-decoration: purple underline;
+}
+
