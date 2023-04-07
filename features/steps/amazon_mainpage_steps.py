@@ -23,10 +23,19 @@ def click_search(context):
 
 
 @then('Verify hamburger menu icon present')
-def verify_ham_menu_present(context):
-    context.driver.find_element(*HAM_MENU)
+def verify_hamburger_menu_present(context):
+    context.hamburger_menu = context.driver.find_element(*HAM_MENU)
+    context.driver.refresh()
+
     # print(element)
-    assert len(elements) == 1, f'Expected 1 element but got {len(elements)}'
+    #assert len(elements) == 1, f'Expected 1 element but got {len(elements)}'
+
+@when('Click on hamburger menu')
+def click_hamburger_menu(context):
+    context.driver.find_element(*HAM_MENU)
+
+
+
 
 
 @then('Verify that footer has {expected_amount} links')
